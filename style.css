@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+
+
+}
+
+.white-mode {
+    --text-color-timer: #323238;
+    --bg-cards: #E1E1E6;
+    --input-color: #323238;
+    --custom-card: #02799D;
+    --change-svg-color: #323238;
+    --card-color: #02799D;
+    --click-svg: #FFFFFF;
+    --click-input: #FFFFFF;
+    --bg-body: #FFFFFF;
+    --buttons-color: #323238;
+}
+
+.dark-mode {
+    --text-color-timer: #FFFFFF;
+    --change-svg-color: #C4C4CC;
+    --input-color: #FFFFFF;
+    --change-card: #0A3442;
+    --buttons-color: #C4C4CC;
+    --bg-cards: #29292E;
+    --card-color: #0A3442;
+    --bg-body: #121214;
+    --click-svg: #FFFFFF;
+    --click-input: #FFFFFF
+}
+
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.trade {
+    background-color: var(--bg-body);
+    min-height: 100vh;
+}
+
+
+.hide {
+    display: none;
+}
+
+.icons-temp {
+    position: absolute;
+    right: 0;
+    padding: 2rem;
+    cursor: pointer;
+
+}
+
+.box-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    display: flex;
+    font-size: 12.6rem;
+    font-weight: 500;
+    line-height: 14.8rem;
+    color: var(--text-color-timer);
+}
+
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 4rem;
+    padding-bottom: 3rem;
+}
+
+
+
+.box-two {
+    width: 30.8rem;
+    height: 33.6rem;
+    margin: auto;
+}
+
+.box-card {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-areas: "A B""C D";
+}
+
+
+
+
+.box-two div {
+    background-color: var(--bg-cards);
+    border-radius: 2.4rem;
+    cursor: pointer;
+    width: 13.8rem;
+    height: 15.2rem;
+    transition-duration: 300ms;
+}
+
+
+
+
+.box-card div:hover {
+    transform: scale(1.1);
+
+}
+
+
+.box-card div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.box-card svg {
+    margin-top: 2.5rem;
+}
+
+
+
+svg path {
+    fill: var(--change-svg-color);
+}
+
+.buttons svg path {
+    fill: var(--buttons-color);
+}
+
+
+.forest-input::-webkit-slider-thumb,
+.rain-input::-webkit-slider-thumb,
+.fire-input::-webkit-slider-thumb,
+.coffe-input::-webkit-slider-thumb {
+    background: var(--input-color);
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.forest-input[type=range],
+.rain-input[type=range],
+.fire-input[type=range],
+.coffe-input[type=range] {
+    position: absolute;
+    top: 11.2rem;
+    -webkit-appearance: none;
+    width: 9rem;
+    height: 0.4rem;
+    border-radius: 5rem;
+    background: var(--input-color);
+}
+
+.box-card .card-color {
+    background-color: var(--card-color);
+}
+
+.box-card .svg-color path,
+.input-click::-webkit-slider-thumb {
+    fill: var(--click-svg);
+    background-color: var(--click-input);
+}
+
+
+.input-change[type=range] {
+    background-color: var(--click-input);
+}
+
+@media(min-width: 860px) {
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 821px;
+        height: 336px;
+        margin: auto;
+        min-height: 100vh;
+    }
+
+    .icons-temp {
+        padding: 60px;
+        cursor: pointer;
+    }
+}
